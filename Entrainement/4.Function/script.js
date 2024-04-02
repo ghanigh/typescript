@@ -14,3 +14,11 @@ foo = () => { };
 // Fonction signature
 let toto;
 toto = (a, b) => a + b;
+// callback
+function greeting(fs) {
+    fs('hello');
+}
+function printConsole(msg) {
+    console.log(msg);
+}
+greeting(printConsole);
