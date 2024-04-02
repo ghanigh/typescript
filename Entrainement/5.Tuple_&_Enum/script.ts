@@ -7,3 +7,26 @@ let array: [boolean, number]
 
 // initialise la variable 'array'
 array = [false, 43]
+
+// Déclare une varaible de 'role' de type objet avec des clés et leurs valeurs respectives.
+const role = {
+    react: 1,
+    php: 2,
+    css: 3
+}
+
+console.log(role);
+
+/*
+Un "enum" (enumération) est une manière de donner un nom a un ensembles de valeurs numerique.
+Non, les valeurs d'un enum en typeScript de sont pas modifiables.
+*/
+
+enum Roles {
+    JAVASCRIPT=1,
+    CSS,
+    REACT
+}
+
+console.log(Roles);
+
