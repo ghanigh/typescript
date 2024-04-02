@@ -3,4 +3,14 @@
 // ? facultatif = pas obligatoire
 // void est different de undefined, undefined est un type
 const multi = (num1, num2, action) => {
+    if (action)
+        console.log(action);
+    return num1 * num2;
 };
+console.log(multi(1, 2));
+// Le type Function s'escrit Majuscul
+let foo;
+foo = () => { };
+// Fonction signature
+let toto;
+toto = (a, b) => a + b;
