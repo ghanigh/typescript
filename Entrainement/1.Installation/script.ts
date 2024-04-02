@@ -8,7 +8,8 @@ const foo = () => {
  console.log(foo());
 
 
- /*
+ /*     touch index.html
+        touch script.ts
      tsc --init (générer le fichier ts.config)   
      tsc -w (pour compiler automatiquement)
      tsc script.ts (pour compiler le typescript)

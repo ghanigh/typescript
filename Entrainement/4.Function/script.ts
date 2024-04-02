@@ -20,13 +20,12 @@ toto = (a, b) => a + b;
 
 // callback
 
-function greeting(fs: (a:string) => void){
+function greeting(fs: (a: string) => void){
     fs('hello')
 }
 
 function printConsole(msg: string){
     console.log(msg);
-
 }
 
 greeting(printConsole)
