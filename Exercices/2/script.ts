@@ -1,10 +1,15 @@
-/* créer une variable "infos" qui ne peut accepter qu'un array de 
-strings ou numbers ou booleans. ensuite ajouter un string "toto" + true + 40 */
+/*
+créer une variable "infos" qui ne peut accepter qu'un array de 
+strings ou numbers ou booleans. ensuite ajouter un string "toto" + true + 40
+*/
 
-let infos: (string | number | boolean)[] = []; 
+// Déclaration d'un tableau pouvant contenir des chaînes de caractères, des nombres ou des booléens
+let infos: (string | number | boolean)[] = [];
 
-infos.push("toto"); 
-infos.push(true); 
-infos.push(40); 
+// Ajout de différentes valeurs au tableau
+infos.push("toto"); // Chaîne de caractères
+infos.push(true);   // Booléen
+infos.push(40);     // Nombre
 
-console.log(infos); 
+// Affichage du contenu du tableau dans la console
+console.log(infos);
