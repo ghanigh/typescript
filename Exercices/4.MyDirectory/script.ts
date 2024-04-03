@@ -1,45 +1,45 @@
 // Définition du type de données pour un contact
 type Contact = {
-  firstName: string; // Prénom du contact
-  lastName: string; // Nom de famille du contact
-  phoneNumber: string; // Numéro de téléphone du contact
-};
+    firstName: string; // Prénom du contact
+    lastName: string; // Nom de famille du contact
+    phoneNumber: string; // Numéro de téléphone du contact
+  };
+  
+  // Classe représentant un répertoire de contacts
+  class Directory {
+    private contacts: Contact[]; // Tableau contenant les contacts
+  
+    // Constructeur de la classe
+    constructor() {
+        this.contacts = []; // Initialise le tableau de contacts
+        console.log("Welcome to your directory!"); // Affiche un message de bienvenue
+    }
 
-// Classe représentant un répertoire de contacts
-class Directory {
-  private contacts: Contact[]; // Tableau contenant les contacts
-
-  // Constructeur de la classe
-  constructor() {
-      this.contacts = []; // Initialise le tableau de contacts
-      console.log("Welcome to your directory!"); // Affiche un message de bienvenue
-  }
-
-  // Méthode affichant l'aide pour les commandes disponibles
+  // Méthode pour afficher l'aide pour les commandes disponibles
   help(): void {
-      console.log("Command Help:");
-      console.log("Add: Add a new contact to the directory.");
-      console.log("List: List all contacts in the directory.");
-      console.log("Delete: Delete a contact from the directory.");
-      console.log("Stop: Close the directory.");
-  }
+    console.log("Command Help:");
+    console.log("Add: Add a new contact to the directory.");
+    console.log("List: List all contacts in the directory.");
+    console.log("Delete: Delete a contact from the directory.");
+    console.log("Stop: Close the directory.");
+}
 
-  // Méthode pour ajouter un contact au répertoire
-  add(firstName: string, lastName: string, phoneNumber: string): void {
-      if (!phoneNumber.startsWith("06")) { // Vérifie si le numéro de téléphone commence par "06"
-          console.log("Phone number must start with '06'.");
-          return; // Arrête l'exécution de la méthode
-      }
+// Méthode pour ajouter un contact au répertoire
+add(firstName: string, lastName: string, phoneNumber: string): void {
+    if (!phoneNumber.startsWith("06")) { // Vérifie si le numéro de téléphone commence par "06"
+        console.log("Phone number must start with '06'.");
+        return; // Arrête l'exécution de la méthode
+    }
 
-      const contact: Contact = { // Crée un nouvel objet contact
-          firstName: firstName,
-          lastName: lastName,
-          phoneNumber: phoneNumber
-      };
+    const contact: Contact = { // Crée un nouvel objet contact
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber
+    };
 
-      this.contacts.push(contact); // Ajoute le contact au tableau
-      console.log("Contact added successfully.");
-  }
+    this.contacts.push(contact); // Ajoute le contact au tableau
+    console.log("Contact added successfully.");
+}
 
   // Méthode pour lister tous les contacts du répertoire
   list(): void {
