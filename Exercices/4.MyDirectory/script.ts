@@ -12,7 +12,7 @@ class Directory {
   private rl: readline.Interface; // Interface readline pour lire depuis l'entrée standard
   private list: IPerson[] = []; // Tableau pour stocker les contacts
 
-  // Constructeur de la classe
+  // Constructeur de la classe 
   constructor() {
     // Initialisation de l'interface readline
     this.rl = readline.createInterface({
