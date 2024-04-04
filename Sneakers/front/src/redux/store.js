@@ -1,7 +1,9 @@
 /*
 Cette dependances est un outil qui permet de faciliter l'utilisation de redux.
 */
-import { configureStore} from "@reduxjs/toolkit"
+import { configureStore } from "@reduxjs/toolkit"
+
+import Sneakers from "./reducers/sneaker"
 
 /*
 ConfigureStore permet de créer le store plus simplement contrairement aux version précédentes de redux.
@@ -13,5 +15,7 @@ La fonction configureStore se connecte automatiquement au DevTools
 */
 
 export default configureStore({
-    reducer: {}
+    reducer: {
+        Sneakers: Sneakers
+    }
 })
