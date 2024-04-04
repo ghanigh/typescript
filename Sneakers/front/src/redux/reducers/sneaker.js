@@ -17,14 +17,14 @@ export const Sneakers = createSlice({
     */
     reducers: {
         FETCH_START: (draft) => {
-            draft.loading = true
+            draft.isLoading = true
         },
         FETCH_SUCCES: (draft, actions) => {
-            draft.loading = false
-            draft.data = action.playload
+            draft.isLoading = false
+            draft.data = actions.payload
         },
         FETCH_FAILURE: (draft) => {
-            draft.loading = false
+            draft.isLoading = false
             draft.error = true
         }
     }

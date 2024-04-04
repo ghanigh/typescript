@@ -16,6 +16,6 @@ La fonction configureStore se connecte automatiquement au DevTools
 
 export default configureStore({
     reducer: {
-        Sneakers: Sneakers
+        sneakers: Sneakers
     }
 })

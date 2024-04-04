@@ -10,18 +10,16 @@ import Data from '../data.json'
 function Home() {
 
  const dispatch = useDispatch();
- console.log(Data);
+ const store = useSelector(state => state )
  
  useEffect(() => {
     dispatch(ACTIONS.FETCH_START());
-    dispatch(ACTIONS.FETCH.START(Data))
+    dispatch(ACTIONS.FETCH_SUCCES(Data))
  }, [])
 
 
   return (
-    <div>
-      
-    </div>
+    <div>Home</div>
   )
 }
 
