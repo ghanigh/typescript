@@ -19,9 +19,9 @@ export const Sneakers = createSlice({
         FETCH_START: (draft) => {
             draft.isLoading = true
         },
-        FETCH_SUCCES: (draft, actions) => {
+        FETCH_SUCCESS: (draft, action) => {
             draft.isLoading = false
-            draft.data = actions.payload
+            draft.data = action.payload
         },
         FETCH_FAILURE: (draft) => {
             draft.isLoading = false
@@ -30,10 +30,6 @@ export const Sneakers = createSlice({
     }
 
 })
-export const {
-    FETCH_START,
-    FETCH_SUCCES,
-    FETCH_FAILURE
-} = Sneakers.actions
 
-export default Sneakers.reducer
+export const { FETCH_START, FETCH_SUCCESS, FETCH_FAILURE } = Sneakers.actions;
+export default Sneakers.reducer;
