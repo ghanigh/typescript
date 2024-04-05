@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-// ACTION //
+// Action //
 import * as ACTION from "../redux/reducers/sneaker.js";
 
-// INTERFACE & TYPE //
+// Interface & Type //
 import { Sneaker, RootState } from "../interfaces/sneakers.ts";
 
-// DATA //
+// Service //
+import { allSneakers } from "../selector/sneaker.selector.ts";
+
+// Data //
 import Data from "../data.json";
-import { RootState } from "@reduxjs/toolkit/query";
 
 function Home() {
   const dispatch = useDispatch();
